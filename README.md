@@ -3,7 +3,7 @@
 
 일정  
 ------------  
-**Day1**   
+**##Day1**   
 ### Preprocessing  
 dpylr, data.table  
  path  
@@ -12,7 +12,7 @@ dpylr, data.table
 Bagging, Boosting, h2o Demo  
 code path  
 
-**Day2**   
+**##Day2**   
 ### h2o practice  
 RF, GBM, CV, grid search, AutoML  
 code path  
