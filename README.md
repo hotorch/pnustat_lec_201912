@@ -1,18 +1,17 @@
-# 부산대학교 연말 특강
+## 부산대학교 연말 특강
 12/26 ~ 27일, 2 ~ 5pm
 
-------------  
-# Day1
+
+## Day1
 #### Preprocessing  
  * ****`PAPER`**** [dpylr, data.table](https://www.notion.so/dsghdud/PNU-STAT-dplyr-data-table-tutorial-12-26-8d04e2cc1b52454c8e4a04dda2a1c013)
  * ****`CODE`**** [dpylr, data.table Code 진행중]()
 
-#### Tree based model
-Bagging, Boosting, h2o Demo  
+#### Tree based model  
  * ****`PAPER`**** [Tree Model](https://www.notion.so/dsghdud/PNU-STAT-Tree-Model-12-26-b63d43c5c93848e9b16bcaa4d2d60684)
  
 
-# Day2
+## Day2
 #### h2o practice  
 * ****`PAPER`**** [h2o Tutorial](https://www.notion.so/dsghdud/PNU-STAT-h2o-tutorial-12-27-1895cba92c9f4f99b34999a2e3acaba4)
 * ****`CODE`**** [h2o Tutorial Code 진행중]()
