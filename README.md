@@ -20,3 +20,7 @@
 #### XAI(eXplainable AI)
 * ****`BOOK`**** [Local Interpretable Model-agnostic Explanations](https://www.notion.so/dsghdud/PNU-STAT-LIME-Local-Interpretable-Model-agnostic-Explanations-12-27-debac4e4d39f4c188936a9a89e5ecb5f)
 * ****`CODE`**** [Local Interpretable Model-agnostic Explanations Code 진행중]()
+
+
+## Feedback plz!!
+[수업 다 들으시고 한번 평가 부탁드립니다!!!](https://forms.gle/CZfxYTMHXp54ebD46)
