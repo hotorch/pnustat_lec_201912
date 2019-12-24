@@ -44,7 +44,7 @@ valid.hex <- as.h2o(valid_dat)
 test.hex <- as.h2o(test[,-"Survived"])
 
 # training  ------------------------------------------------------------
-?h2o.randomForest
+
 rf_model <- h2o.randomForest(x = setdiff(names(train.hex), "Survived"),
                           y = "Survived",
                           training_frame = train.hex, 
@@ -55,7 +55,7 @@ rf_model <- h2o.randomForest(x = setdiff(names(train.hex), "Survived"),
                           seed = 12345) 
 rf_model
 
-?h2o.gbm
+
 gbm_model <- h2o.gbm(x = setdiff(names(train.hex), "Survived"),
                      y = "Survived",
                      training_frame = train.hex, 
@@ -110,8 +110,8 @@ h2o.varimp_plot(gbm_model)
 
 # lift --------------------------------------------------------------------
 
-h2o.gainsLift(rf_model, test.hex)
-h2o.gainsLift(gbm_model, test.hex)
+h2o.gainsLift(rf_model)
+h2o.gainsLift(gbm_model)
 
 
 # h2o.shutdown(prompt = F)
