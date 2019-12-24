@@ -30,7 +30,7 @@ h2o.auc(aml@leader)
 pred <- h2o.predict(aml, test.hex)  
 
 # or:
-pred <- h2o.predict(aml@leader, test)
+pred <- h2o.predict(aml@leader, test.hex)
 
 # h2o.shutdown(prompt = F)
 # end of document ---------------------------------------------------------
