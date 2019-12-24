@@ -22,7 +22,6 @@ test[,y] <- as.factor(test[,y])
 
 
 # Modeling ----------------------------------------------------------------
-?h2o.deeplearning
 
 dl_fit1 <- h2o.deeplearning(x = x,
                             y = y,
@@ -43,6 +42,7 @@ dl_fit2 <- h2o.deeplearning(x = x,
                             seed = 1)
 dl_fit2
 
+# recommend!!!
 dl_fit3 <- h2o.deeplearning(x = x,
                             y = y,
                             training_frame = test,
@@ -59,21 +59,17 @@ dl_fit3 <- h2o.deeplearning(x = x,
 
 # Evaluation ----------------------------------------------------------------
 
-dl_perf1 <- h2o.performance(model = dl_fit1, newdata = test)
-dl_perf2 <- h2o.performance(model = dl_fit2, newdata = test)
+# dl_perf1 <- h2o.performance(model = dl_fit1, newdata = test)
+# dl_perf2 <- h2o.performance(model = dl_fit2, newdata = test)
 dl_perf3 <- h2o.performance(model = dl_fit3, newdata = test)
-dl_perf1
-dl_perf2
-dl_perf3
 
 # Retreive test set MSE
-h2o.mse(dl_perf1)
-h2o.mse(dl_perf2)
-h2o.mse(dl_perf3)
+# h2o.mse(dl_perf1) # 0.01881584
+# h2o.mse(dl_perf2) # 0.00155582
+# h2o.mse(dl_perf3) # 0.0002706472
 
 # python ~= report 
 h2o.scoreHistory(dl_fit3)
-
 h2o.confusionMatrix(dl_fit3)
 
 # plot a model ----------------------------------------------------------------
@@ -95,7 +91,7 @@ plot(cv_models[[1]],
 
 
 # Deep Learning Grid Search -----------------------------------------------
-
+# do not run!! 
 activation_opt <- c("Rectifier", "Maxout")# , "Tanh")
 l1_opt <- c(0, 0.001)
 l2_opt <- c(0, 0.001)
@@ -133,9 +129,6 @@ best_dl_perf <- h2o.performance(model = best_dl, newdata = test)
 best_dl_perf 
 
 h2o.mse(best_dl_perf)
-
-
-h2o.shutdown(prompt = F)
 
 # Reference ---------------------------------------------------------------
 # https://htmlpreview.github.io/?https://github.com/ledell/sldm4-h2o/blob/master/sldm4-deeplearning-h2o.html
