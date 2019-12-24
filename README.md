@@ -23,4 +23,4 @@
 
 
 ## Feedback plz!!
-[수업 다 들으시고 한번 평가 부탁드립니다!!!](https://forms.gle/CZfxYTMHXp54ebD46)
+[**피드백** 부탁드립니다!](https://forms.gle/CZfxYTMHXp54ebD46)
