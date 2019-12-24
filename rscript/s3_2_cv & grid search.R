@@ -14,7 +14,7 @@ model_cv <- h2o.gbm(x = setdiff(names(train.hex), "Survived"),
 model_cv
 
 # AUC of cross-validated holdout predictions
-h2o.auc(model_fit, xval = TRUE)
+h2o.auc(model_cv, xval = TRUE)
 
 # This is where list of cv preds are stored (one element per fold): 
 model_cv@model[["cross_validation_predictions"]]
