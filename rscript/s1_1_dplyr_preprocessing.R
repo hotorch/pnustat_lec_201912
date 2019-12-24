@@ -5,7 +5,7 @@ library(dplyr)
 
 # load data ---------------------------------------------------------------
 
-raw <- read.csv('../lecture_1226/data/titanic.csv')
+raw <- read.csv('./data/titanic.csv')
 str(raw)
 datatable(raw)
 summary(raw)
