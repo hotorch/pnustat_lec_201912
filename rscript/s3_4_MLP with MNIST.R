@@ -5,9 +5,9 @@ h2o.init(nthreads = -1)
 
 #  Load the MNIST and prepare the data ------------------------------------
 # This step takes a few seconds bc we have to download the data from the internet...
-train_file <- "https://h2o-public-test-data.s3.amazonaws.com/bigdata/laptop/mnist/train.csv.gz"
+# train_file <- "https://h2o-public-test-data.s3.amazonaws.com/bigdata/laptop/mnist/train.csv.gz"
 test_file <- "https://h2o-public-test-data.s3.amazonaws.com/bigdata/laptop/mnist/test.csv.gz"
-train <- h2o.importFile(train_file)
+# train <- h2o.importFile(train_file)
 test <- h2o.importFile(test_file)
 dim(train);dim(test)
 
