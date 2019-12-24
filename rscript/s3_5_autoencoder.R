@@ -6,15 +6,14 @@ h2o.init(nthreads = -1)
 
 #  Load the MNIST and prepare the data ------------------------------------
 
-train_file <- "https://h2o-public-test-data.s3.amazonaws.com/bigdata/laptop/mnist/train.csv.gz"
+# train_file <- "https://h2o-public-test-data.s3.amazonaws.com/bigdata/laptop/mnist/train.csv.gz"
 test_file <- "https://h2o-public-test-data.s3.amazonaws.com/bigdata/laptop/mnist/test.csv.gz"
-train <- h2o.importFile(train_file)
+# train <- h2o.importFile(train_file)
 test <- h2o.importFile(test_file)
 y <- "C785"  #response column: digits 0-9
 x <- setdiff(names(test), y)  #vector of predictor column names
 # train[,y] <- as.factor(train[,y])
 test[,y] <- as.factor(test[,y])
-
 
 splits <- h2o.splitFrame(test, 0.5, seed = 1)
 
