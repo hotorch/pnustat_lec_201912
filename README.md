@@ -3,7 +3,7 @@
 
 
 ## Day1
-#### Preprocessing  
+#### Session1. Preprocessing  
  ###### ****`BOOK`**** 
  * [dpylr, data.table](https://www.notion.so/dsghdud/PNU-STAT-dplyr-data-table-tutorial-12-26-8d04e2cc1b52454c8e4a04dda2a1c013)
  ###### ****`CODE`**** 
@@ -11,12 +11,12 @@
  * [2. data.table](https://github.com/hotorch/pnustat_lec_201912/blob/master/rscript/s1_2_data.table.R)
  * [3. feature_engineering](https://github.com/hotorch/pnustat_lec_201912/blob/master/rscript/s1_3_feature_engineer_titanic.R)
 
-#### Tree based model  
+#### Session2. ML & Tree based model  
  ###### ****`BOOK`**** 
  * [Tree Model](https://www.notion.so/dsghdud/PNU-STAT-Tree-Model-12-26-b63d43c5c93848e9b16bcaa4d2d60684)
 
 ## Day2
-#### h2o practice  
+#### Session3. h2o practice  
  ###### ****`BOOK`**** 
  * [h2o Tutorial](https://www.notion.so/dsghdud/PNU-STAT-h2o-tutorial-12-27-1895cba92c9f4f99b34999a2e3acaba4)
  ###### ****`CODE`**** 
@@ -26,7 +26,7 @@
  * [4. MLP](https://github.com/hotorch/pnustat_lec_201912/blob/master/rscript/s3_4_MLP%20with%20MNIST.R)
  * [5. AutoEncoder](https://github.com/hotorch/pnustat_lec_201912/blob/master/rscript/s3_5_autoencoder.R)
 
-#### XAI(eXplainable AI)
+#### Session4. XAI(eXplainable AI) - LIME
 ###### ****`BOOK`**** 
 * [Local Interpretable Model-agnostic Explanations](https://www.notion.so/dsghdud/PNU-STAT-LIME-Local-Interpretable-Model-agnostic-Explanations-12-27-debac4e4d39f4c188936a9a89e5ecb5f)
 ###### ****`CODE`**** 
