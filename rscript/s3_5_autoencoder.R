@@ -1,19 +1,30 @@
-
+library(data.table)
 library(h2o)
 h2o.init(nthreads = -1)
 
 # h2o.no_progress()  # Disable progress bars for Rmd
 
 #  Load the MNIST and prepare the data ------------------------------------
-
+# This step takes a few seconds bc we have to download the data from the internet...
 # train_file <- "https://h2o-public-test-data.s3.amazonaws.com/bigdata/laptop/mnist/train.csv.gz"
-test_file <- "https://h2o-public-test-data.s3.amazonaws.com/bigdata/laptop/mnist/test.csv.gz"
 # train <- h2o.importFile(train_file)
-test <- h2o.importFile(test_file)
-y <- "C785"  #response column: digits 0-9
-x <- setdiff(names(test), y)  #vector of predictor column names
-# train[,y] <- as.factor(train[,y])
+# test_file <- "https://h2o-public-test-data.s3.amazonaws.com/bigdata/laptop/mnist/test.csv.gz"
+# test <- h2o.importFile(test_file)
+
+test_file <- fread('./data/mnist_test.csv', encoding = 'UTF-8')
+test <- as.h2o(test_file)
+
+y <- "V785"  #response column: digits 0-9 / 1 ~ 784
+x <- setdiff(names(test), y)  # vector of predictor column names
+
+# Since the response is encoded as integers, we need to tell H2O that
+# the response is in fact a categorical/factor column.  Otherwise, it 
+# will train a regression model instead of multiclass classification.
+# train[,y] <- as.factor(train[,y]) 
 test[,y] <- as.factor(test[,y])
+
+
+# split data --------------------------------------------------------------
 
 splits <- h2o.splitFrame(test, 0.5, seed = 1)
 
@@ -22,10 +33,6 @@ train_unsupervised <- splits[[1]]
 
 # second part of the data, with labels for supervised learning
 train_supervised <- splits[[2]]
-
-dim(train_supervised)
-
-dim(train_unsupervised)
 
 
 # Create Model ------------------------------------------------------------
@@ -57,7 +64,7 @@ ae_model
 #                          hidden = hidden)
 # 
 # perf2 <- h2o.performance(fit2, newdata = test)
-# h2o.mse(perf2) # 
+# h2o.mse(perf2) 
 
 # Deep Features -----------------------------------------------------------
 
@@ -72,7 +79,6 @@ train_reduced
 rf1 <- h2o.randomForest(x = names(train_reduced_x), y = y, 
                         training_frame = train_reduced,
                         ntrees = 100, seed = 1)
-rf1 
 
 test_reduced_x <- h2o.deepfeatures(ae_model, test, layer = 1)
 test_reduced <- h2o.cbind(test_reduced_x, test[,y])
@@ -125,10 +131,3 @@ plotDigits(test, test_rec_error, c(9995:10000))
 
 # h2o.shutdown(prompt = F)
 # end of document ---------------------------------------------------------
-
-
-
-
-
-
-
