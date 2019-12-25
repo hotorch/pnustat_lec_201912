@@ -113,7 +113,7 @@ h2o.varimp_plot(gbm_model)
 h2o.gainsLift(rf_model)
 h2o.gainsLift(gbm_model)
 
-
+# http://localhost:54321
 # h2o.shutdown(prompt = F)
 # end of document ---------------------------------------------------------
 
