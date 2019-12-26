@@ -96,22 +96,18 @@ lgb_model <- h2o.xgboost(x = setdiff(names(train.hex), "Survived"),
 rf_pred <- h2o.predict(rf_model, test.hex)
 gbm_pred <- h2o.predict(gbm_model, test.hex)
 
-h2o.confusionMatrix(rf_model)
-h2o.confusionMatrix(gbm_model)
+# h2o.confusionMatrix
 
-h2o.auc(rf_model)
-h2o.auc(gbm_model)
+# h2o.auc
 
-h2o.varimp(rf_model)
-h2o.varimp(gbm_model)
+# h2o.varimp
 
-h2o.varimp_plot(rf_model)
-h2o.varimp_plot(gbm_model)
+# h2o.varimp_plot
+
 
 # lift --------------------------------------------------------------------
 
-h2o.gainsLift(rf_model)
-h2o.gainsLift(gbm_model)
+# h2o.gainsLift
 
 # http://localhost:54321
 # h2o.shutdown(prompt = F)
